@@ -1,7 +1,0 @@
-{
-  "/services/api/*": {
-    "target": "https://www.flickr.com",
-    "secure": false,
-    "changeOrigin": true
-  }
-}

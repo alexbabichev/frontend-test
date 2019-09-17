@@ -1,39 +1,12 @@
-# Tpredic Gallery Assignment
+# flickr-searcher
+Angular 5 Photo searcher using Flickr API
 
-Welecome to our front end Assignment for new applicatns.
+# Sample screenshots
 
-
-# How to get started?
-
-1. Clone this repository to your computer.
-2. Run 'npm i' -> 'ng serve'.
-3. You project url is 'http://localhost:4200/'.
-4. Follow the test instructions.
-4. Make sure you open your own repository, here in github.
-5. Make sure to commit at each step.
-
-
-# What do you need to do?
-
-Our project contains an image gallery that is loaded from 'Flickr', using a 'Get request'.
-There are 100 images that are being loaded to the gallery.
-The gallery images are related to a 'Tag' that can be insert in the header search bar.
-
-The following changes need to be implemented to the gallery:
-  1. Make images popup on click.
-  2. Turn the Gallery into 'infinite-scrolling' gallery (for example: facebook feed).
-  3. Add a uniq feature. Here is where you can go wild and show us what you can do.
-  4. BONUS: Implement the infinite scrolling without using third party packages
-  
-  
-# Additional Info
-
-* You can use any third party packages.
-* There are no time limit (but please let us know your how long you assume it may take)
-* You are incuraged to get help from the web but make sure you understand each element that you are using.
-* Please send us a link to your repository once the assignment is completed.
-
-Good Luck :)
-
-
-
+![searcherwebmainpage](https://user-images.githubusercontent.com/8292572/36241698-a140abda-11f6-11e8-9c26-0541681b9757.JPG)
+![searcherwebdetailpage](https://user-images.githubusercontent.com/8292572/36241696-a0de47d8-11f6-11e8-9c8c-1d42a2da832f.JPG)
+![searcherwebdetailpage_paging](https://user-images.githubusercontent.com/8292572/36241697-a10fd2a8-11f6-11e8-84e6-339444bd4292.JPG)
+![searchermobilemainpage](https://user-images.githubusercontent.com/8292572/36241694-a0830f94-11f6-11e8-967f-1748036c28e0.JPG)
+![searchermobilephotos](https://user-images.githubusercontent.com/8292572/36241695-a0a6c0ec-11f6-11e8-9f51-51163cd32b2d.JPG)
+![searchermobiledetailpage](https://user-images.githubusercontent.com/8292572/36241693-a04172fa-11f6-11e8-963b-37366c926f62.JPG)
+![karmatestruncapture](https://user-images.githubusercontent.com/8292572/36241692-a016ed64-11f6-11e8-88b6-25cd08547b77.JPG)

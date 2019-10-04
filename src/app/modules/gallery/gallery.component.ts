@@ -30,9 +30,7 @@ export class GalleryComponent {
     this.isLoading = true;
     this.galleryService.getData(searchValue, page)
       .subscribe((res: ImageData[]) => {
-        // this.gallery = this.gallery.concat(res);
-
-        this.gallery = res;
+        this.gallery = this.gallery.concat(res);
         this.isLoading = false;
       });
   }

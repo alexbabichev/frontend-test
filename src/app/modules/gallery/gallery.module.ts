@@ -3,21 +3,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 
 import { LightboxModule } from 'ngx-lightbox';
-
-import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.component';
+import { InfiniteScrollModule } from '../infinite-scroll/infinite-scroll.module';
 import { GalleryComponent } from './gallery.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    LightboxModule
+    LightboxModule,
+    InfiniteScrollModule
   ],
   declarations: [
-    GalleryComponent,
-    InfiniteScrollComponent
+    GalleryComponent
   ],
   exports: [
-    GalleryComponent,
+    GalleryComponent
   ]
 })
 export class GalleryModule {

@@ -1,7 +1,17 @@
-.pb-2 {
-  flex: 1 1 auto;
+infinite-scroll {
+  display: block;
+  width: 100%;
+}
 
-  .imgWrapper {
+.Grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+
+  .ImgWrapper {
     width: 200px;
     height: 200px;
 

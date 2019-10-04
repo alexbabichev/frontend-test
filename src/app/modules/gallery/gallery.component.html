@@ -1,8 +1,8 @@
 <div class="row m-0">
-  <infinite-scroll (scrolled)="onScroll()" [options]="{ rootMargin: '1400px' }">
-    <div class="col-12 d-flex flex-wrap pt-3 justify-content-around">
-      <div class="pb-2" *ngFor="let photo of this.gallery; let photoIndex = index" (click)="openLightbox(photoIndex)">
-        <div class="imgWrapper">
+  <infinite-scroll (scrolled)="onScroll()" [options]="{ rootMargin: '1000px' }">
+    <div class="col-12 pt-3 Grid">
+      <div *ngFor="let photo of this.gallery; let photoIndex = index" (click)="openLightbox(photoIndex)">
+        <div class="ImgWrapper">
           <img [src]="gallery[photoIndex].thumb" alt="gallery[photoIndex].caption" />
         </div>
       </div>

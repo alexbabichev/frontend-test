@@ -1,14 +1,14 @@
 <div class="row m-0">
-    <infinite-scroll (scrolled)="onScroll()" [options]="{ rootMargin: '1400px' }">
-        <div class="col-12 d-flex flex-wrap pt-3 justify-content-around">
-            <div class="pb-2" *ngFor="let photo of this.gallery; let photoIndex = index" (click)="openLightbox(photoIndex)">
-                <div class="imgWrapper">
-                    <img [src]="gallery[photoIndex].thumb" alt="gallery[photoIndex].caption" />
-                </div>
-            </div>
+  <infinite-scroll (scrolled)="onScroll()" [options]="{ rootMargin: '1400px' }">
+    <div class="col-12 d-flex flex-wrap pt-3 justify-content-around">
+      <div class="pb-2" *ngFor="let photo of this.gallery; let photoIndex = index" (click)="openLightbox(photoIndex)">
+        <div class="imgWrapper">
+          <img [src]="gallery[photoIndex].thumb" alt="gallery[photoIndex].caption" />
         </div>
-        <div *ngIf="isLoading">
-            <p>Fetching pics...</p>
-        </div>
-    </infinite-scroll>
+      </div>
+    </div>
+    <div *ngIf="isLoading">
+      <p>Fetching pics...</p>
+    </div>
+  </infinite-scroll>
 </div>

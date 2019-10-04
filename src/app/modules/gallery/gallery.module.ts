@@ -8,17 +8,17 @@ import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.comp
 import { GalleryComponent } from './gallery.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        LightboxModule
-    ],
-    declarations: [
-        GalleryComponent,
-        InfiniteScrollComponent
-    ],
-    exports: [
-        GalleryComponent,
-    ]
+  imports: [
+    CommonModule,
+    LightboxModule
+  ],
+  declarations: [
+    GalleryComponent,
+    InfiniteScrollComponent
+  ],
+  exports: [
+    GalleryComponent,
+  ]
 })
 export class GalleryModule {
 

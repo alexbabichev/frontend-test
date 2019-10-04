@@ -1,10 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Observable, Subscription } from 'rxjs';
+import { Lightbox } from 'ngx-lightbox';
 import { GalleryService } from 'src/app/core/services/gallery.service';
-
-// const getImagesUrl = `services/rest/?method=flickr.photos.search&api_key=522c1f9009ca3609bcbaf08545f067ad&tags=${tag}&page=${page}&tag_mode=any&per_page=100&format=json&safe_search=1&nojsoncallback=1`;
-// const baseUrl = 'https://api.flickr.com/';
 
 @Component({
     selector: 'gallery',
@@ -13,27 +10,51 @@ import { GalleryService } from 'src/app/core/services/gallery.service';
 })
 export class GalleryComponent {
     @Input() events: Observable<void>;
-    private eventsSubscription: any;
+
+    private eventsSubscription: Subscription;
     private gallery = [];
 
+    private page = 0;
 
-    constructor(private httpClient: HttpClient, private galleryService: GalleryService){}
+    public isLoading = false;
+
+    constructor(private galleryService: GalleryService, private lightbox: Lightbox) { }
 
     ngOnInit() {
-        this.loadImageGallery('flower', 1);
-        this.eventsSubscription = this.events.subscribe((searchValue) => this.loadImageGallery(searchValue, 1))
+        this.eventsSubscription = this.events
+            .subscribe((searchValue) => this.loadImageGallery(searchValue, 1));
     }
 
-    loadImageGallery(searchValue, page) {
-        this.galleryService.getCalendarData(searchValue, page).subscribe(res => {
-            this.gallery=res.photos.photo;
-            console.log(this.gallery);
-        });
+    loadImageGallery(searchValue, page: number) {
+        this.isLoading = true;
+        this.galleryService.getData(searchValue, page)
+            .subscribe(res => {
+                const pageData = res.photos.photo
+                    .map(imageData => {
+                        return {
+                            ...imageData,
+                            src: this.galleryService.getImageLink(imageData),
+                            caption: imageData.title,
+                            thumb: this.galleryService.getImageLink(imageData).replace('.jpg', '_n.jpg')
+                        }
+                    });
+                this.gallery = this.gallery.concat(pageData);
+                this.isLoading = false;
+            });
     }
 
+    openLightbox(index: number) {
+        this.lightbox.open(this.gallery, index);
+    }
+
+    onScroll() {
+        this.page++;
+        console.log('onScroll', this.page);
+        this.loadImageGallery('flower', this.page);
+    }
 
     ngOnDestroy() {
-        this.eventsSubscription.unsubscribe()
+        this.eventsSubscription.unsubscribe();
     }
 
 }

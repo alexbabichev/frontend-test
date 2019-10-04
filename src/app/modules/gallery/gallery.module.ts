@@ -2,17 +2,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 
-import {ImageModule} from '../image/image.module';
+import { LightboxModule } from 'ngx-lightbox';
 
-// This Module's Components
+import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.component';
 import { GalleryComponent } from './gallery.component';
+
 @NgModule({
     imports: [
         CommonModule,
-        ImageModule
+        LightboxModule
     ],
     declarations: [
         GalleryComponent,
+        InfiniteScrollComponent
     ],
     exports: [
         GalleryComponent,

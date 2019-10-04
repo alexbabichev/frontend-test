@@ -21,15 +21,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.	
 
 
-## Build	# What do you need to do?
+## What do you need to do?
 
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.	Our project contains an image gallery that is loaded from 'Flickr', using a 'Get request'.
+Our project contains an image gallery that is loaded from 'Flickr', using a 'Get request'.
 there are 100 images that are being loaded to the gallery.
 The gallery images are related to a 'Tag' that can be insert in the header search bar.
 
 
-## Running unit tests	The following changes need to be implemented to the gallery:
+## The following changes need to be implemented to the gallery:
   1. Make images popup on click.
   2. Turn the Gallery into 'infinite-scrolling' gallery (for example: facebook feed).
   3. Add a uniq feature. Here is where you can go wild and show us what you can do.
@@ -38,11 +37,16 @@ The gallery images are related to a 'Tag' that can be insert in the header searc
 
 # Additional Info
 
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).	* You can use any third party packages.
 * There are no time limit (but please let us know your how long you assume it may take)
 * You are incuraged to get help from the web but make sure you understand each element that you are using.
 * Please send us a link to your repository onece the assignment is completed.
 
 
 ## Running end-to-end tests	Good Luck :)
+
+### Result
+
+* Custom infinite scroll
+* ngx-lightbox for images popup on click
+* Styles: flex replaced by css grid
+* Typings & interfaces

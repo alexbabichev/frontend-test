@@ -46,7 +46,8 @@ The gallery images are related to a 'Tag' that can be insert in the header searc
 
 ### Result
 
-* Custom infinite scroll
+* Custom infinite scroll (IntersectionObserver used)
 * ngx-lightbox for images popup on click
-* Styles: flex replaced by css grid
+* Styles: flex replaced by css grid, fixed images aspect ratio, animation added
 * Typings & interfaces
+* Url string composing moved to service
